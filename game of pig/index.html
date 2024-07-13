@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of pig!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Game of PIG!</h1>
+        
+        <div id="instructions">
+            <h3>Instructions:</h3>
+            <p>
+                Player 1 rolls the dice. If the roll is anything other than 1, the number is added to the player's score.
+                If the roll is a 1, it becomes Player 2's turn. Player 2 then rolls the dice, and the same rules apply.
+                If you feel that your luck is running out, you can click the "Hold" button to add your current score to your final score.
+                However, if you roll a 1 before holding, you lose all points that haven't been held. So, be careful and good luck!
+                The winner is the first player to reach 100 points.
+            </p>
+        </div>
+
+        <div id="display">
+            <div id="player1-div">
+                <label>player 1 current score</label>
+                <input readonly id="player1-score">
+            </div>
+    
+            <div id="dice">
+                <label>number on dice:</label>
+                <input readonly id="number-on-dice">
+            </div>
+    
+            <div id="player2-div">
+                <label>player 2 current score</label>
+                <input readonly id="player2-score">
+            </div>
+    
+        </div>
+        
+        <div id="total-scores">
+            <label>player 1's total score</label>
+            <input readonly id="player1-total">
+            <label>player 2's total score</label>
+            <input readonly id="player2-total">
+        </div>
+
+        <div id="buttons">
+            <button onclick="holdTheScore()">HOLD</button>
+            <button onclick="rollTheDice()">ROLL</button>
+            <button onclick="restartTheGame()">RESTART</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
